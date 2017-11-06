@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/dwc3k5/bamazon#readme",
   "dependencies": {
-    "inquirer": "^3.3.0"
+    "inquirer": "^3.3.0",
+    "mysql": "^2.15.0"
   }
 }
