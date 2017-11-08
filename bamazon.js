@@ -54,9 +54,7 @@ function purchase (){
   var slct = parseInt(response.selection);
   connection.query("SELECT * FROM products", function(err, res) {
     amt = res[slct-1].stock_quantity - response.amount;
-    console.log(amt);
   connection.query("UPDATE products SET stock_quantity = ? WHERE item_id= ?", [amt, slct], function(err, res) {
-    console.log(amt);
     if (err) throw err;
       // Log all results of the SELECT statement
 
@@ -64,7 +62,7 @@ function purchase (){
     });
   });
   //passing the parameters here?!?
-  });
+}).then(function(){ stock(init);});
 
 }
 
